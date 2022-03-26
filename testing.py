@@ -15,19 +15,19 @@ def test_pregunta_3():
 #########################################################
 
 def test_pregunta_4():
-    assert Examen1.numeroPolimax (4312) == True 
+    assert Examen1.numeroPolimax(4312) == True 
     
 def test_pregunta_5():
-    assert Examen1.numeroPolimax (327017) == True
+    assert Examen1.numeroPolimax(327017) == True
     
 def test_pregunta_6():
-    assert Examen1.numeroPolimax (-6887) == False
+    assert Examen1.numeroPolimax(-6887) == False
     
 def test_pregunta_7():
-    assert Examen1.numeroPolimax (-99) == True
+    assert Examen1.numeroPolimax(-99) == True
     
 def test_pregunta_8():
-    assert Examen1.numeroPolimax (7) == False
+    assert Examen1.numeroPolimax(7) == False
     
 #########################################################    
 
