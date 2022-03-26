@@ -7,11 +7,14 @@
 - **Debe** contruir las funciones con **Python**
 - **Debe** utilizar la programación vistas en clases **while for if elif**
 - **Debe** crear los comentarios de cada función tomando en cuenta **Nombre**, **Entrada**, **Salida** y **Restricciones**
-
+- Cada pregunta vale 6 puntos:
+  - Los comentarios 1 punto (1 cometario bueno, 0.5 comentario incompleto, 0 no hay comentarios)
+  - Algoritmo 5 puntos (5 Excelente, 4 a 1 Termiando con errores de sintaxis o incompleto , 0 No lo hizo)
+  
 ## numeroHermano(num)
 Escriba un programa con sintaxis Python cuya función principal se llame **numeroHermano(num)**, que reciba como entrada un número **entero positivo** denominado **num** y que retorne si cumple (True) o no los requisitos (False) de número hermano. 
 - Un número hermano es un número natural y que poseer **dos divisores primos** 
-- El uno no es primo, y no se tomará en cuenta el mismo **num**:
+- El 1 no es primo, y no se tomará en cuenta el mismo **num**:
 - Debe de agregar el código para números primos
 
 Ejemplos del comportamiento de la función:
@@ -30,9 +33,9 @@ Escriba un programa con sintaxis Python cuya función principal se llame **numer
 - La longitud del número debe ser par
 
 Sea el número 4312, al partir este numero, generará 43 y 12
-43 tiene 1 dígito par y 1 digito impar
-12 tiene 1 dígito par y 1 digito impar
-Tanto el 43 y 12 tiene la misma cantidad de dígitos pares e impares, por lo que la respuesta es **True**
+- 43 tiene 1 dígito par y 1 digito impar
+- 12 tiene 1 dígito par y 1 digito impar
+- Por tanto el 43 y 12 tiene la misma cantidad de dígitos pares e impares, por lo que la respuesta es **True**
 
 Ejemplos del comportamiento de la función:
 ```python
