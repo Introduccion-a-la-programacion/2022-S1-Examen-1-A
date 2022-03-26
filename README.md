@@ -70,4 +70,26 @@ Ejemplo:
 >>> construirNumero([2.3, 13, 25, "Hola", 455, 40]) #pares = [],  impares = []
 0
 ```
-## encriptarLlave(num)
+## encriptarClave(num)
+Escriba un programa con sintaxis Python cuya función principal se llame **encriptarClave(num)**, el número **num** debe ser entero diferente a cero, puede ser positivo o negativo. El número debe tener la cantidad desde 4 a 8 dígitos
+Para encriptar una clave, se debe realizar los siguientes pasos:
+1) Verificar que el número tenga el largo de digitos definido
+2) Si el número es negativo, pasarlo a positivo
+3) Transformar ese número a una base 7
+4) Posteriormente restar el nuevo número base 7 menos el parámetro **num**
+5) Si el parámetro **num** es negativo, la respuesta debe ser negativo
+
+Ejemplo:
+Sea num = 125689
+Su cantidad de dígitos es 6 entonces está dentro del rango de 4 a 8
+125689 as base 7 = 1032304
+1032304 - 125689 = 906615
+
+```python
+>>> encriptarClave(125689)
+906615
+>>> encriptarClave(-125689)
+-906615
+>>> encriptarClave(125)
+"Error: La cantidad de digitos no está entre 4 a 8"
+```
