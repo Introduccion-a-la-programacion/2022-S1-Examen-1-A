@@ -1,81 +1,73 @@
-# 2021 Semestre 2
+# 2022 Semestre 1
 # Primer Examen
 
 ## Instrucciones Generales
 - El archivo **debe** llamarse **Examen1.py**
 - **Debe** respetar el nombre de las funciones y el nombre de los parámetros que más adelante se describen
-- Deben contruir las funciones con **Python**
-- Debe utilizar la programación **recursiva de pila**
-- Debe crear los comentarios de cada función tomando en cuenta **Nombre**, **Entrada**, **Salida** y **Restricciones**
+- **Debe** contruir las funciones con **Python**
+- **Debe** utilizar la programación vistas en clases **while for if elif**
+- **Debe** crear los comentarios de cada función tomando en cuenta **Nombre**, **Entrada**, **Salida** y **Restricciones**
 
-##	Número abundante (25 puntos) 
-Escriba un programa con sintaxis Python cuya función principal se llame **numeroAbundante(num)**, que reciba como entrada un número entero positivo denominado **num** y que retorne si cumple (True) o no los requisitos (False) de número abundante. 
-Un número abundante es un número natural y que la suma de sus divisores es mayor que su duplo, es decir:
--	El valor de **num** será 12 y sus divisores son (1,2,3,4,6 y 12)
--	La suma de ellos son 1+2+3+4+6+12 = 28
--	Entonces el 12 es un número abundante porque la suma de sus divisores 28 y es mayor que el duplo de 12, es decir 24. (28 > 12 x 2)
+## numeroHermano(num)
+Escriba un programa con sintaxis Python cuya función principal se llame **numeroHermano(num)**, que reciba como entrada un número **entero positivo** denominado **num** y que retorne si cumple (True) o no los requisitos (False) de número hermano. 
+- Un número hermano es un número natural y que poseer **dos divisores primos** 
+- El uno no es primo, y no se tomará en cuenta el mismo **num**:
+- Debe de agregar el código para números primos
 
+Ejemplos del comportamiento de la función:
 ```python
->>>numeroAbundate(12)
+>>> numeroHermano(20) #(divisores propios: 2, 4, 5, 10)
 True
->>> numeroAbundate (8)
+>>> numeroHermano (8) #(divisores propios: 2, 4)
 False
->>> numeroAbundate (-8)
-“Error: La entrada, debe ser número positivo”
+>>> numeroHermano (-8)
+“Error en la entrada”
 ```
 
-##	Suma Adyacentes Impar (25 puntos) 
+## numeroPolimax(num)
+Escriba un programa con sintaxis Python cuya función principal se llame **numeroPolimax(num)**, puede recibe un **número entero cualquiera** e indique si el número es un Número Polimax. 
+- Un número es **Polimax** si al partir en dos el número, ambas partes tienen la misma cantidad de impares y pares. 
+- La longitud del número debe ser par
 
-Escriba un programa con sintaxis Python cuya función principal se llame **adyacentesImpares(num)**, recibe un número **entero positivo** y debe retornar **True** en caso de que todas las sumas de **dos dígitos adyacentes sean impares**, retornar **False** en caso de que alguna suma de adyacentes **no sea impar**, es decir:
-- Sea num = 9252783
-  - Agrupar cada 2 dígitos y sumarlos cada uno de ellos: 3+8, 7+2, 5+2, 9 y el resultado de cada una de esas suma son: 11, 9, 7, 9
-  - Como se puede apreciar todos esos resultados son impares, por lo tanto la respuesta es **True**
+Sea el número 4312, al partir este numero, generará 43 y 12
+43 tiene 1 dígito par y 1 digito impar
+12 tiene 1 dígito par y 1 digito impar
+Tanto el 43 y 12 tiene la misma cantidad de dígitos pares e impares, por lo que la respuesta es **True**
 
+Ejemplos del comportamiento de la función:
 ```python
->>> adyacentesImpares (9252783) 
+>>> numeroPolimax (4312) # 43 y 12
 True 
->>> adyacentesImpares (51730)
-False
->>> adyacentesImpares (5836)
+>>> numeroPolimax (327017) # 327 y 017
 True
->>> adyacentesImpares (-9)
-“Error: Número debe ser positivo”
-```
+>>> numeroPolimax (-6887) # 68 87
+False
+>>> numeroPolimax (-99) # 99
+True
+>>> numeroPolimax (7) 
+False
+```python
 
-## Convertir Número (25 puntos) 
+## construirNumero(lista)
+Escriba un programa con sintaxis Python cuya función principal se llame **construirNumero(lista)**, puede recibe una **lista de elementos cualquiera**.
+- Los números a tomar en cuenta son mayores a cero y menor a 10
+- Primero debe separar en dos listas, aquellos números pares enteros positivos y en otra lista los números impares enteros positivos
+- Con cada una de las listas construir un nuevo número
+- Y finalizar sumándolos
+- Prohibido el uso de **str()** y **int()**
 
-Escribir un programa con sintaxis Python cuya función principal se llame **convertirNumero(num, exponente)**, reciben dos números **enteros cualquiera** y retorne un nuevo número con la siguiente lógica:
-- Sea el número num = 12558 y exponente = 4
-- El total de dígitos de **num** debe ser **IMPAR**
-- Se obtiene el dígito del medio (5) y aplica la potencia según su **exponente** es decir, 5 ** 4 = 625
-- El extremo izquierdo (12) formará un nuevo número solo con los dígitos **impares**, es decir 1
-- El extremo derecho (58) formará un nuevo número solo con los dígitos **pares**, es decir 8
-- El nuevo número a formar sería el siguiente: 16258
-- En el caso de no existir pares o impares, el resultado será de CERO
+Ejemplo:
+1) lista = [2, 3, 5, "Casa", 15, 9, 58.5, 9, 6, 4]
+2) pares = [2, 6, 4],  impares = [3, 5, 9, 9]
+3) numeroPar = 264,  numeroImpar = 3599
+4) 264 + 3599 = 3863
 
 ```python
->>> convertirNumero(12558, 4)
-16258
->>> convertirNumero(-94161, 5) #-9 1 6
--916
->>> convertirNumero(8517210, 5) #51 16807 20
-511680720
->>>convertirNumero('8517210', 5)
-“Error: Debe ser entero”
+>>> construirNumero([2, 3, 5, "Casa", 15, 9, 58.5, 9, 6, 4])  #pares = [2, 6, 4],  impares = [3, 5, 9, 9]
+3863
+>>> construirNumero([2, 13, 25, "Hola", 5, 4]) #pares = [2, 4],  impares = [5]
+29
+>>> construirNumero([2.3, 13, 25, "Hola", 455, 40]) #pares = [],  impares = []
+0
 ```
-  
-##	Comprimir Número (25 puntos) 
-Escriba un programa con sintaxis Python cuya función principal se llame **comprimirNumero(num)**, recibe un número **entero** y debe retornar un nuevo número quitando aquellos dígitos **repetidos** en este, es decir:
-- Sea num = 15532, el **dígito 5** se aparece más de una vez por lo tanto será eliminado, dando como resultado, **1532**
-- Sea num = 82581534, los **dígitos 8 y 5** se aparecen más de una vez por lo tanto serán eliminados, dando como resultado, **825134**
-
-```python
->>> comprimirNumero (15532) 
-1532 
->>> comprimirNumero (82581534) 
-281534
->>> comprimirNumero (-82581534) 
--281534
->>>comprimirNumero('82581534')
-“Error: Debe ser entero”
-```
+## encriptarLlave(num)
