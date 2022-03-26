@@ -1,45 +1,52 @@
 import Examen1;
 import pytest;
-    
-def test_numeroAbundate_1():
-    assert Examen1.numeroAbundante(12) == True
-def test_numeroAbundate_2():
-    assert Examen1.numeroAbundante(8) == False
-def test_numeroAbundate_3():
-    assert isinstance(Examen1.numeroAbundante(-8), str) == isinstance("Error: La entrada, debe ser número positivo", str)    
-    
-#############################################################################################
 
-def test_adyacentesImpares_1():
-    assert Examen1.adyacentesImpares (9252783) == True 
-    
-def test_adyacentesImpares_2():
-    assert Examen1.adyacentesImpares (51730) == False
-    
-def test_adyacentesImpares_3():
-    assert Examen1.adyacentesImpares (5836) == True
-    
-def test_adyacentesImpares_4():
-    assert isinstance(Examen1.adyacentesImpares (-9), str) == isinstance("Error: Número debe ser positivo", str)
-    
-#############################################################################################
+#########################################################
 
-def test_convertirNumero_1():
-    assert Examen1.convertirNumero(12558, 4) == 16258
-def test_convertirNumero_2():
-    assert Examen1.convertirNumero(-94161, 5) == -916
-def test_convertirNumero_3():
-    assert Examen1.convertirNumero(8517210, 5) == 511680720
-def test_convertirNumero_4():
-    assert isinstance(Examen1.convertirNumero('8517210', 5), str) == isinstance("Error: Debe ser entero", str)    
+def test_pregunta_1():
+    assert Examen1.numeroHermano(20) == True
     
-#############################################################################################
+def test_pregunta_2():
+    assert Examen1.numeroHermano(8) == False
+    
+def test_pregunta_3():
+    assert isinstance(str(Examen1.numeroHermano(-8)), str) == isinstance("Error en la entrada", str)
+    
+#########################################################
 
-def test_comprimirNumero_1():
-    assert Examen1.comprimirNumero (15532) == 1532 
-def test_comprimirNumero_2():
-    assert Examen1.comprimirNumero (82581534) == 281534
-def test_comprimirNumero_3():
-    assert Examen1.comprimirNumero (-82581534) == -281534    
-def test_comprimirNumero_4():
-    assert isinstance(Examen1.comprimirNumero('82581534'), str) == isinstance("Error: Debe ser entero", str)     
+def test_pregunta_4():
+    assert Examen1.numeroPolimax (4312) == True 
+    
+def test_pregunta_5():
+    assert Examen1.numeroPolimax (327017) == True
+    
+def test_pregunta_6():
+    assert Examen1.numeroPolimax (-6887) == False
+    
+def test_pregunta_7():
+    assert Examen1.numeroPolimax (-99) == True
+    
+def test_pregunta_8():
+    assert Examen1.numeroPolimax (7) == False
+    
+#########################################################    
+
+def test_pregunta_9():
+    assert Examen1.construirNumero([2, 3, 5, "Casa", 15, 9, 58.5, 9, 6, 4])  == 3863
+
+def test_pregunta_10():
+    assert Examen1.construirNumero([2, 13, 25, "Hola", 5, 4]) == 29
+
+def test_pregunta_11():
+    assert Examen1.construirNumero([2.3, 13, 25, "Hola", 455, 40]) == 0
+    
+#########################################################    
+
+def test_pregunta_12():
+    assert Examen1.encriptarClave(125689) == 906615
+
+def test_pregunta_13():
+    assert Examen1.encriptarClave(-125689) == -906615
+    
+def test_pregunta_14():
+    assert isinstance(str(Examen1.encriptarClave(125)), str) == isinstance("Error: La cantidad de digitos no está entre 4 a 8", str)
