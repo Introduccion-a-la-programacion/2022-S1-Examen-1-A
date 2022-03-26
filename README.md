@@ -21,7 +21,7 @@ True
 >>> numeroHermano (8) #(divisores propios: 2, 4)
 False
 >>> numeroHermano (-8)
-“Error en la entrada”
+"Error en la entrada"
 ```
 
 ## numeroPolimax(num)
@@ -80,10 +80,10 @@ Para encriptar una clave, se debe realizar los siguientes pasos:
 5) Si el parámetro **num** es negativo, la respuesta debe ser negativo
 
 Ejemplo:
-Sea num = 125689
-Su cantidad de dígitos es 6 entonces está dentro del rango de 4 a 8
-125689 as base 7 = 1032304
-1032304 - 125689 = 906615
+- Sea num = 125689
+- Su cantidad de dígitos es 6 entonces está dentro del rango de 4 a 8
+- 125689 as base 7 = 1032304
+- 1032304 - 125689 = 906615
 
 ```python
 >>> encriptarClave(125689)
