@@ -46,7 +46,7 @@ False
 True
 >>> numeroPolimax (7) 
 False
-```python
+```
 
 ## construirNumero(lista)
 Escriba un programa con sintaxis Python cuya función principal se llame **construirNumero(lista)**, puede recibe una **lista de elementos cualquiera**.
